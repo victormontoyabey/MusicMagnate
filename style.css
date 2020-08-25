@@ -3,7 +3,6 @@
 
 * {
   background-color: #e9c46a;
-  width: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -34,20 +33,24 @@ header p {
 }
 
 .app {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
 .pads {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
 .pads > div {
   height: 100px;
   width: 100px;
+  cursor: pointer;
+  flex: 1;
 }
 
 .pad1 {
@@ -72,4 +75,27 @@ header p {
 
 .pad6 {
   background: #264653;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+  100% {
+    bottom: 0%;
+    left: 80%;
+  }
+}
+
+.visual > div {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  bottom: 0;
 }
